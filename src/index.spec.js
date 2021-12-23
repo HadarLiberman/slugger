@@ -7,8 +7,8 @@ import {slugger} from "./index";
      * @it - unit tests can use the 'it' syntax
      */
     it('slugger can slug string with spaces', () => {
-        let output="hey-how-are-u";
-        expect(slugger("hey","how","are","u")).toEqual(output);
+        let output="hey-u";
+        expect(slugger("  hey","u")).toEqual(output);
     })
     /**
      * @test - unit test can use the 'test' syntax
@@ -17,6 +17,6 @@ import {slugger} from "./index";
         
         let output="hey-how-are-u";
 
-        expect(slugger("hey","how","are","u")).toEqual(output);
+        expect(slugger("hey   "," how","   are"," u")).toEqual(output);
     })
 })

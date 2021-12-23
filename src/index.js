@@ -1,3 +1,3 @@
 export function slugger(...args){
-    return [...args].filter(cur=>cur!==' ').join('-');
+    return [...args].map(cur=>cur.trim()).join("-");  
 }
