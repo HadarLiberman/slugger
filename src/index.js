@@ -1,3 +1,3 @@
 export function slugger(...args){
-    return args.join('-');
+    return [...args].filter(cur=>cur!==' ').join('-');
 }

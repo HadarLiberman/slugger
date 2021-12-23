@@ -5,7 +5,10 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/consumer.draft.js"
+    "dev": "nodemon src/consumer.draft.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js jest ./src/index.spec.js",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,7 @@
     "@ajar/marker": "^1.3.3"
   },
   "devDependencies": {
+    "jest": "^27.4.5",
     "nodemon": "^2.0.15"
   }
 }
